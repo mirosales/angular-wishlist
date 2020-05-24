@@ -19,12 +19,18 @@
                         </div>
                         <button type="submit" class="btn btn-primary" (click)= "guardar(nombre.value, url.value)">Guardar!</button>
                     </form>
+                    <!-- <app-form-destino-viaje (onItemAdded)="agregado($event)"></app-form-destino-viaje> -->
                 </div>
             </div>
         </div>
     </div>
     <hr class="mb-5">
     <div class="row">
-        <app-destino-viaje *ngFor = "let x of destinos" [destino]="x" ></app-destino-viaje>
+        <app-destino-viaje
+         *ngFor = "let x of destinos; let i=index" 
+         [destino]="x" 
+         [posicion]= "i+1"
+         (clicked) ="elegido($event)" >
+        </app-destino-viaje>
     </div>
 </div>
