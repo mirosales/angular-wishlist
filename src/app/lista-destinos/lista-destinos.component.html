@@ -27,7 +27,7 @@
     <hr class="mb-5">
     <div class="row">
         <app-destino-viaje
-         *ngFor = "let x of destinos; let i=index" 
+         *ngFor = "let x of getdestinosApiClient().getAll(); let i=index" 
          [destino]="x" 
          [posicion]= "i+1"
          (clicked) ="elegido($event)" >
