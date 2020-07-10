@@ -8,7 +8,7 @@
                     <h3 class="mb-0">Lista de deseos</h3>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <!-- <form>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Ingresa nombre" #nombre>
@@ -18,8 +18,8 @@
                             <input type="text" class="form-control" id="imagenUrl" placeholder="Ingresa la url" #url>
                         </div>
                         <button type="submit" class="btn btn-primary" (click)= "guardar(nombre.value, url.value)">Guardar!</button>
-                    </form>
-                    <!-- <app-form-destino-viaje (onItemAdded)="agregado($event)"></app-form-destino-viaje> -->
+                    </form> -->
+                    <app-form-destino-viaje (onItemAdded)="agregado($event)"></app-form-destino-viaje>
                 </div>
             </div>
         </div>
@@ -32,5 +32,12 @@
          [posicion]= "i+1"
          (clicked) ="elegido($event)" >
         </app-destino-viaje>
+    </div>
+    <hr class="mb-5">
+    <h5>Actividad</h5>
+    <div class="row">
+        <ul>
+            <li *ngFor = "let u of updates">{{u}}</li>
+        </ul>
     </div>
 </div>

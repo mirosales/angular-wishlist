@@ -20,6 +20,7 @@ export class DestinoViajeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   ir(){
     this.clicked.emit(this.destino);
     return false;
